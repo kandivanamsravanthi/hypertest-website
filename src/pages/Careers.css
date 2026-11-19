@@ -1,0 +1,228 @@
+
+/* HYPERTEST CAREERS - NAVY & CYAN THEME */
+
+.careers-page {
+  background: #050B14;
+  color: #ffffff;
+  min-height: 100vh;
+  font-family: 'DM Sans', Arial, sans-serif;
+}
+
+/* HERO */
+.careers-hero {
+  min-height: 430px;
+  padding: 100px 8%;
+  text-align: center;
+  color: white;
+  background:
+    radial-gradient(circle at 80% 30%, rgba(32,197,210,.18), transparent 35%),
+    linear-gradient(120deg, #030914, #0B1C2C, #103D50);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.careers-hero span,
+.career-heading span {
+  color: #43D5E5;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+
+.careers-hero h1 {
+  font-size: clamp(35px, 5vw, 58px);
+  margin: 20px 0;
+  font-family: Manrope, sans-serif;
+}
+
+.careers-hero p {
+  max-width: 650px;
+  line-height: 1.8;
+  color: #d4e2ec;
+}
+
+/* CONTENT */
+.career-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 25px;
+}
+
+.career-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.career-heading h2 {
+  font-size: 36px;
+  margin: 15px 0;
+  color: #ffffff;
+  font-family: Manrope, sans-serif;
+}
+
+.career-heading p {
+  color: #b8c8d5;
+  line-height: 1.7;
+}
+
+/* CAREER CARDS */
+.career-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.career-card {
+  background: linear-gradient(145deg, #102638, #091725);
+  border: 1px solid rgba(67, 213, 229, 0.2);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.career-card:hover {
+  transform: translateY(-8px);
+  border-color: #20C5D2;
+  box-shadow: 0 15px 35px rgba(32, 197, 210, 0.18);
+}
+
+.career-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+}
+
+.career-card-content {
+  padding: 25px;
+}
+
+.career-card-content > span {
+  color: #43D5E5;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.career-card-content h3 {
+  font-size: 23px;
+  margin: 12px 0;
+  color: #ffffff;
+  font-family: Manrope, sans-serif;
+}
+
+.career-card-content p {
+  color: #c0d0dc;
+  line-height: 1.7;
+  min-height: 80px;
+}
+
+.career-card-content a {
+  display: inline-block;
+  margin-top: 15px;
+  color: #43D5E5;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.career-card-content a:hover {
+  color: #ffffff;
+}
+
+/* CONTACT */
+.career-contact {
+  padding: 70px 20px;
+  text-align: center;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(32,197,210,.16), transparent 35%),
+    linear-gradient(120deg, #071522, #0B2636, #103D50);
+  color: white;
+}
+
+.career-contact h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  font-family: Manrope, sans-serif;
+}
+
+.career-contact p {
+  color: #d0e0e9;
+  margin-bottom: 25px;
+}
+
+.career-contact a {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 7px;
+  background: #20C5D2;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.career-contact a:hover {
+  background: #087FA5;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(32, 197, 210, 0.3);
+}
+
+/* CAREERS NAVBAR */
+.careers-navbar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 35px;
+  padding: 22px 7%;
+  background: #061321;
+  border-bottom: 1px solid #ffffff16;
+}
+
+.careers-navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.careers-navbar a:hover {
+  color: #43D5E5;
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+  .career-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 550px) {
+  .careers-hero {
+    padding: 75px 20px;
+  }
+
+  .career-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .career-heading h2 {
+    font-size: 28px;
+  }
+
+  .career-card-content p {
+    min-height: auto;
+  }
+
+  .careers-navbar {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 18px 12px;
+  }
+}

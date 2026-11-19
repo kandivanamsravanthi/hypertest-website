@@ -1,0 +1,171 @@
+
+/* =================================
+   HYPERTESTINC CHATBOT
+================================= */
+
+.chatbot {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  z-index: 9999;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* CHAT BUTTON */
+
+.chat-toggle {
+  width: 62px;
+  height: 62px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #9d4edd, #7b2cbf);
+  color: white;
+  font-size: 27px;
+  cursor: pointer;
+  box-shadow: 0 8px 30px #9d4edd70;
+  transition: 0.3s;
+}
+
+.chat-toggle:hover {
+  transform: scale(1.08);
+}
+
+/* CHAT WINDOW */
+
+.chat-window {
+  position: absolute;
+  right: 0;
+  bottom: 78px;
+  width: 350px;
+  height: 460px;
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 15px 55px #0004;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e8ddf5;
+}
+
+/* CHAT HEADER */
+
+.chat-header {
+  background: linear-gradient(135deg, #17102b, #7b2cbf);
+  color: white;
+  padding: 19px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header strong {
+  display: block;
+  font-size: 16px;
+}
+
+.chat-header small {
+  display: block;
+  margin-top: 5px;
+  color: #e3c8ff;
+  font-size: 12px;
+}
+
+.chat-header button {
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 27px;
+  cursor: pointer;
+}
+
+/* CHAT MESSAGES */
+
+.chat-messages {
+  flex: 1;
+  padding: 17px;
+  overflow-y: auto;
+  background: #f7f5fb;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.chat-message {
+  max-width: 85%;
+  padding: 11px 14px;
+  border-radius: 13px;
+  font-size: 13px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.chat-message.bot {
+  align-self: flex-start;
+  background: white;
+  color: #252238;
+  border: 1px solid #eee8f5;
+  border-bottom-left-radius: 3px;
+}
+
+.chat-message.user {
+  align-self: flex-end;
+  background: #9d4edd;
+  color: white;
+  border-bottom-right-radius: 3px;
+}
+
+/* CHAT INPUT */
+
+.chat-input {
+  display: flex;
+  gap: 8px;
+  padding: 13px;
+  background: white;
+  border-top: 1px solid #eee8f5;
+}
+
+.chat-input input {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid #e0d9eb;
+  border-radius: 25px;
+  padding: 11px 14px;
+  outline: none;
+  font-size: 13px;
+}
+
+.chat-input input:focus {
+  border-color: #9d4edd;
+}
+
+.chat-input button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: #9d4edd;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 480px) {
+  .chatbot {
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .chat-window {
+    width: calc(100vw - 30px);
+    max-width: 350px;
+    height: 430px;
+    bottom: 72px;
+  }
+
+  .chat-toggle {
+    width: 56px;
+    height: 56px;
+  }
+}
